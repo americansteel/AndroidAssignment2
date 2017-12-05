@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gb.comp3074_assignment2.EnterTestActivity">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="19dp"
+        android:text="Add Test Data:"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/testIdEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/textView11"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Test ID" />
+
+    <EditText
+        android:id="@+id/patientIdEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/testIdEdit"
+        android:layout_alignStart="@+id/testIdEdit"
+        android:layout_below="@+id/testIdEdit"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Patient ID" />
+
+    <EditText
+        android:id="@+id/bplEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/patientIdEdit"
+        android:layout_alignStart="@+id/patientIdEdit"
+        android:layout_below="@+id/patientIdEdit"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="BPL" />
+
+    <EditText
+        android:id="@+id/bphEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bplEdit"
+        android:layout_alignStart="@+id/bplEdit"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number"
+        android:text="BPH" />
+
+    <EditText
+        android:id="@+id/temperatureEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bphEdit"
+        android:layout_alignStart="@+id/bphEdit"
+        android:layout_below="@+id/bphEdit"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Temperature" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/temperatureEdit"
+        android:layout_marginTop="20dp"
+        android:text="Submit" />
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gb.comp3074_assignment2.NurseMainActivity">
+
+    <Button
+        android:id="@+id/enterTestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="138dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:text="Enter Test"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <Button
+        android:id="@+id/displayTestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enterTestButton"
+        android:layout_alignBottom="@+id/enterTestButton"
+        android:layout_alignLeft="@+id/displayPatientButton"
+        android:layout_alignStart="@+id/displayPatientButton"
+        android:text="Display Test"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/enterPatientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enterTestButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/enterTestButton"
+        android:layout_marginTop="134dp"
+        android:text="Enter Patient"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <Button
+        android:id="@+id/displayPatientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enterPatientButton"
+        android:layout_alignBottom="@+id/enterPatientButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="Display Patient"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="180dp" />
+</RelativeLayout>
