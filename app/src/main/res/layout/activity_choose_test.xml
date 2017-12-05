@@ -4,42 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gb.comp3074_assignment2.DisplayPatientActivity">
+    tools:context="com.gb.comp3074_assignment2.ChooseTestActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:text="Choose Patient"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="25dp" />
+        android:text="Choose Test:"
+        android:textSize="18sp" />
 
     <Spinner
-        android:id="@+id/patient_spinner"
+        android:id="@+id/test_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="17dp" />
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="16dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/patient_spinner"
-        android:layout_marginTop="13dp"
+        android:layout_below="@+id/test_spinner"
+        android:layout_marginTop="14dp"
         android:onClick="onClickBtn"
         android:text="Submit" />
-
 </RelativeLayout>

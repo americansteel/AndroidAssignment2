@@ -23,12 +23,12 @@ public final class MedicalContract {
     static final String CREATE_TEST_ENTRY_TABLE =
             "CREATE TABLE " + TestEntry.TABLE_NAME +
                     " ( " +
-                    TestEntry.COLUMN_TEST_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    TestEntry.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    TestEntry.COLUMN_TEST_ID + " INTEGER NOT NULL, " +
                     TestEntry.COLUMN_PATIENT_ID + " INTEGER NOT NULL, " +
                     TestEntry.COLUMN_BPL + " TEXT NOT NULL, " +
                     TestEntry.COLUMN_BPH + " TEXT NOT NULL, " +
-                    TestEntry.COLUMN_TEMPERATURE + " TEXT NOT NULL, " +
-                    "UNIQUE ( " + TestEntry.COLUMN_TEST_ID + ") ON CONFLICT REPLACE )";
+                    TestEntry.COLUMN_TEMPERATURE + " TEXT NOT NULL )";
     static final String CREATE_NURSE_ENTRY_TABLE =
             "CREATE TABLE " + NurseEntry.TABLE_NAME +
                     " ( " +
@@ -61,6 +61,7 @@ public final class MedicalContract {
 
     public static class TestEntry implements BaseColumns {
         public static final String TABLE_NAME = "test";
+        public static final String COLUMN_ID = "id";
         public static final String COLUMN_TEST_ID = "testId";
         public static final String COLUMN_PATIENT_ID = "patientId";
         public static final String COLUMN_BPL = "BPL";

@@ -33,12 +33,13 @@ public class DisplayTestInfoActivity extends Activity {
 
         Intent intent = getIntent();
         String firstName = intent.getStringExtra("firstName");
+        int testId = Integer.parseInt(intent.getStringExtra("testId"));
 
         List<Patient> patientsList = dataSource.getPatientByFirstName(firstName);
         Patient patient = patientsList.get(0);
 
 
-        List<Test> testList = dataSource.getTestById(patient.getId());
+        List<Test> testList = dataSource.getTestByTestId(testId);
         Test test = testList.get(0);
 
         patientIdText.setText(String.valueOf(patient.getId()));
@@ -46,6 +47,7 @@ public class DisplayTestInfoActivity extends Activity {
         bplText.setText(String.valueOf(test.getBpl()));
         bphText.setText(String.valueOf(test.getBph()));
         temperatureText.setText(String.valueOf(test.getTemperature()));
+        dataSource.close();
 
 
     }

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.gb.comp3074_assignment2.classes.Patient;
+
 public class NurseMainActivity extends Activity implements View.OnClickListener {
 
     Intent intent;
@@ -28,7 +30,8 @@ public class NurseMainActivity extends Activity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.enterTestButton:
-                intent = new Intent(getApplicationContext(), EnterTestActivity.class);
+                intent = new Intent(getApplicationContext(), PatientTestSelection.class);
+                intent.putExtra("controller", "nurse");
                 startActivity(intent);
                 break;
             case R.id.displayTestButton:

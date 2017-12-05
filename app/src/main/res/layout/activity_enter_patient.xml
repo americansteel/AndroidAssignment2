@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.gb.comp3074_assignment2.EnterPatientActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="18dp"
+        android:text="Enter New Patient:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/firstNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_below="@+id/textView15"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/lastNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/firstNameEdit"
+        android:layout_alignStart="@+id/firstNameEdit"
+        android:layout_below="@+id/firstNameEdit"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/departmentEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lastNameEdit"
+        android:layout_alignStart="@+id/lastNameEdit"
+        android:layout_below="@+id/lastNameEdit"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/roomEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/departmentEdit"
+        android:layout_alignStart="@+id/departmentEdit"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Room"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/doctorIdEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/roomEdit"
+        android:layout_alignStart="@+id/roomEdit"
+        android:layout_below="@+id/roomEdit"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Doctor ID"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/doctorIdEdit"
+        android:layout_marginTop="19dp"
+        android:onClick="onClickBtn"
+        android:text="Button" />
+
+</RelativeLayout>

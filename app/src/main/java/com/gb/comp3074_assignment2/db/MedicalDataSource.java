@@ -41,7 +41,6 @@ public class MedicalDataSource {
 
     public void createPatient(Patient patient) {
         ContentValues values = new ContentValues();
-        values.put(MedicalContract.PatientEntry.COLUMN_PATIENT_ID, patient.getId());
         values.put(MedicalContract.PatientEntry.COLUMN_FIRST_NAME, patient.getFirstName());
         values.put(MedicalContract.PatientEntry.COLUMN_LAST_NAME, patient.getLastName());
         values.put(MedicalContract.PatientEntry.COLUMN_DEPARTMENT, patient.getDepartment());
@@ -136,8 +135,33 @@ public class MedicalDataSource {
         return patients;
     }
 
-    public List<Test> getTestById(int id) {
+    public List<Test> getTestByPatientId(int id) {
         String selection = "SELECT * FROM test WHERE patientId = " + id;
+
+
+        List<Test> tests = new ArrayList<>();
+        Cursor cursor = database.rawQuery(selection, null);
+        try {
+            while (cursor.moveToNext()) {
+                Test test = new Test(
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEST_ID)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_PATIENT_ID)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPH)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPL)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEMPERATURE))
+                );
+                tests.add(test);
+            }
+
+        } finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+        return tests;
+    }
+    public List<Test> getTestByTestId(int id) {
+        String selection = "SELECT * FROM test WHERE testId = " + id;
 
 
         List<Test> tests = new ArrayList<>();

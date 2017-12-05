@@ -16,6 +16,12 @@ public class Patient extends Person {
 
     }
 
+    public Patient ( String firstName, String lastName, String department, int doctorId, String room){
+        super(firstName, lastName, department);
+        this.doctorId = doctorId;
+        this.room = room;
+    }
+
     public int getDoctorId() {
         return doctorId;
     }

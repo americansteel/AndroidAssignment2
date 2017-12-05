@@ -26,7 +26,8 @@ public class DoctorMainActivity extends Activity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.enterTestButton:
-                intent = new Intent(getApplicationContext(), EnterTestActivity.class);
+                intent = new Intent(getApplicationContext(),PatientTestSelection.class);
+                intent.putExtra("controller", "doctor");
                 startActivity(intent);
                 break;
             case R.id.displayTestButton:

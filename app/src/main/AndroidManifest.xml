@@ -22,7 +22,10 @@
         <activity android:name=".EnterPatientActivity" />
         <activity android:name=".EnterTestActivity" />
         <activity android:name=".NurseMainActivity" />
-        <activity android:name=".DisplayTestInfoActivity"></activity>
+        <activity android:name=".DisplayTestInfoActivity" />
+        <activity android:name=".PatientTestSelection" />
+        <activity android:name=".ChooseTestActivity" />
+        <activity android:name=".classes.DisplayPatientInfoActivity"></activity>
     </application>
 
 </manifest>

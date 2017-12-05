@@ -12,6 +12,7 @@ import com.gb.comp3074_assignment2.classes.Patient;
 import com.gb.comp3074_assignment2.classes.Test;
 import com.gb.comp3074_assignment2.db.MedicalDataSource;
 
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -37,15 +38,17 @@ public class MainActivity extends Activity {
         super.onResume();
         //open db
         dataSource.open();
+        List<Patient> patients = dataSource.getAllPatients();
         //create DB data
-        for (int i = 1; i < 11; i++) {
-            String iStr = String.valueOf(i);
-            dataSource.createPatient(new Patient(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment", i + 30, "Room " + iStr));
-            dataSource.createTest(new Test(i, i, 90 + i, 100 + i, 98 + i));
-            dataSource.createNurse(new Nurse(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
-            dataSource.createDoctor(new Doctor(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
+        if (patients.isEmpty()) {
+            for (int i = 1; i < 11; i++) {
+                String iStr = String.valueOf(i);
+                dataSource.createPatient(new Patient(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment", i + 30, "Room " + iStr));
+                dataSource.createTest(new Test(i, i, 90 + i, 100 + i, 98 + i));
+                dataSource.createNurse(new Nurse(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
+                dataSource.createDoctor(new Doctor(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
+            }
         }
-
     }
 
     @Override

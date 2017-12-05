@@ -22,6 +22,12 @@ public class Person {
         this.department = department;
     }
 
+    public Person ( String firstName, String lastName, String department) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+    }
+
     public int getId() {
         return id;
     }

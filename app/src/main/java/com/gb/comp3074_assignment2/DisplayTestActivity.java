@@ -24,7 +24,6 @@ public class DisplayTestActivity extends Activity {
         setContentView(R.layout.activity_display_test);
 
         dataSource = new MedicalDataSource(this);
-
         dataSource.open();
         List<Patient> patientList = dataSource.getAllPatients();
         List<String> patientNames = new ArrayList<String>();
@@ -42,9 +41,10 @@ public class DisplayTestActivity extends Activity {
 
     public void onClickBtn(View v) {
         Spinner spinner = findViewById(R.id.patient_spinner);
-        Intent intent = new Intent(getApplicationContext(), DisplayTestInfoActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ChooseTestActivity.class);
         intent.putExtra("firstName", spinner.getSelectedItem().toString());
         startActivity(intent);
+        dataSource.close();
     }
 
 }

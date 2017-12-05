@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gb.comp3074_assignment2.DisplayPatientActivity">
-
+    tools:context="com.gb.comp3074_assignment2.PatientTestSelection">
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -43,3 +42,4 @@
         android:text="Submit" />
 
 </RelativeLayout>
+

@@ -7,22 +7,25 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.gb.comp3074_assignment2.classes.DisplayPatientInfoActivity;
 import com.gb.comp3074_assignment2.classes.Patient;
 import com.gb.comp3074_assignment2.db.MedicalDataSource;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DisplayPatientActivity extends Activity {
+public class PatientTestSelection extends Activity {
 
-    MedicalDataSource dataSource;
+    private MedicalDataSource dataSource;
+    Intent intent;
 
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_test);
 
         dataSource = new MedicalDataSource(this);
+
         dataSource.open();
         List<Patient> patientList = dataSource.getAllPatients();
         List<String> patientNames = new ArrayList<String>();
@@ -40,9 +43,12 @@ public class DisplayPatientActivity extends Activity {
 
     public void onClickBtn(View v) {
         Spinner spinner = findViewById(R.id.patient_spinner);
-        Intent intent = new Intent(getApplicationContext(), DisplayPatientInfoActivity.class);
+        intent = getIntent();
+        String controller = intent.getStringExtra("controller");
+        intent = new Intent(getApplicationContext(), EnterTestActivity.class);
         intent.putExtra("firstName", spinner.getSelectedItem().toString());
+        intent.putExtra("controller", controller );
         startActivity(intent);
-        dataSource.close();
     }
+
 }
