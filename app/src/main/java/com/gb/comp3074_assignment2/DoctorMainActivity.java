@@ -36,4 +36,8 @@ public class DoctorMainActivity extends Activity implements View.OnClickListener
                 break;
         }
     }
+    public void onLogoutClick(View v) {
+        intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
 }

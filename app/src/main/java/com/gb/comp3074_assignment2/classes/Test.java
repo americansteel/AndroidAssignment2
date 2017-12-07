@@ -11,14 +11,16 @@ public class Test {
     private int bpl;
     private int bph;
     private int temperature;
+    private int bloodPressure;
 
-    public Test(int id, int patientId, int bpl, int bph, int temperature) {
+    public Test(int id, int patientId, int bpl, int bph, int temperature, int bloodPressure) {
 
         this.id = id;
         this.patientId = patientId;
         this.bpl = bpl;
         this.bph = bph;
         this.temperature = temperature;
+        this.bloodPressure = bloodPressure;
 
     }
 
@@ -60,5 +62,13 @@ public class Test {
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;
+    }
+
+    public int getBloodPressure() {
+        return bloodPressure;
+    }
+
+    public void setBloodPressure(int bloodPressure) {
+        this.bloodPressure = bloodPressure;
     }
 }

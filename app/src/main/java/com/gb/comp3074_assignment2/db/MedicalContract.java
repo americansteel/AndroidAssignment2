@@ -28,7 +28,8 @@ public final class MedicalContract {
                     TestEntry.COLUMN_PATIENT_ID + " INTEGER NOT NULL, " +
                     TestEntry.COLUMN_BPL + " TEXT NOT NULL, " +
                     TestEntry.COLUMN_BPH + " TEXT NOT NULL, " +
-                    TestEntry.COLUMN_TEMPERATURE + " TEXT NOT NULL )";
+                    TestEntry.COLUMN_TEMPERATURE + " TEXT NOT NULL, " +
+                    TestEntry.COLUMN_BLOOD_PRESSURE + " INTEGER NOT NULL )";
     static final String CREATE_NURSE_ENTRY_TABLE =
             "CREATE TABLE " + NurseEntry.TABLE_NAME +
                     " ( " +
@@ -67,6 +68,7 @@ public final class MedicalContract {
         public static final String COLUMN_BPL = "BPL";
         public static final String COLUMN_BPH = "BPH";
         public static final String COLUMN_TEMPERATURE = "temperature";
+        public static final String COLUMN_BLOOD_PRESSURE = "bloodPressure";
     }
 
     public static class NurseEntry implements BaseColumns {

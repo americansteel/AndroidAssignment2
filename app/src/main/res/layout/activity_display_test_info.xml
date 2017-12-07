@@ -8,15 +8,16 @@
 
     <TextView
         android:id="@+id/patient_information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="22dp"
-        android:text="Test Information:"
+        android:background="?android:attr/colorAccent"
+        android:gravity="center"
+        android:text="Test Information"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="34dp" />
 
@@ -24,10 +25,12 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/patient_information"
-        android:layout_alignStart="@+id/patient_information"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/patient_information"
-        android:layout_marginTop="22dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="21dp"
         android:text="Test ID:" />
 
     <TextView
@@ -111,4 +114,22 @@
         android:layout_alignTop="@+id/textView10"
         android:layout_toEndOf="@+id/patient_information"
         android:layout_toRightOf="@+id/patient_information" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="22dp"
+        android:text="Blood Pressure:" />
+
+    <TextView
+        android:id="@+id/blood_pressure_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/temperature_text"
+        android:layout_alignStart="@+id/temperature_text"
+        android:layout_alignTop="@+id/textView16" />
 </RelativeLayout>

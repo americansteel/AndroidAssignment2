@@ -10,13 +10,14 @@
         android:id="@+id/enterTestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="138dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_alignEnd="@+id/enterPatientButton"
+        android:layout_alignRight="@+id/enterPatientButton"
+        android:layout_below="@+id/textView18"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="62dp"
         android:text="Enter Test"
+        android:textAllCaps="false"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="27dp" />
 
@@ -29,6 +30,7 @@
         android:layout_alignLeft="@+id/displayPatientButton"
         android:layout_alignStart="@+id/displayPatientButton"
         android:text="Display Test"
+        android:textAllCaps="false"
         tools:layout_editor_absoluteX="183dp"
         tools:layout_editor_absoluteY="33dp" />
 
@@ -36,11 +38,14 @@
         android:id="@+id/enterPatientButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/enterTestButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/enterTestButton"
-        android:layout_marginTop="134dp"
+        android:layout_below="@+id/textView17"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_toLeftOf="@+id/displayPatientButton"
+        android:layout_toStartOf="@+id/displayPatientButton"
         android:text="Enter Patient"
+        android:textAllCaps="false"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="180dp" />
 
@@ -50,11 +55,53 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/enterPatientButton"
         android:layout_alignBottom="@+id/enterPatientButton"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
+        android:layout_alignEnd="@+id/button3"
+        android:layout_alignRight="@+id/button3"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:text="Display Patient"
+        android:textAllCaps="false"
         tools:layout_editor_absoluteX="235dp"
         tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/colorAccent"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Patient Information" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/enterPatientButton"
+        android:layout_marginTop="78dp"
+        android:background="?android:attr/colorAccent"
+        android:gravity="center"
+        android:text="Test Information"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:onClick="onLogoutClick"
+        android:text="Logout" />
 </RelativeLayout>

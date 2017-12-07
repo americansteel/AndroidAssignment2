@@ -77,6 +77,7 @@ public class MedicalDataSource {
         values.put(MedicalContract.TestEntry.COLUMN_BPL, test.getBpl());
         values.put(MedicalContract.TestEntry.COLUMN_BPH, test.getBph());
         values.put(MedicalContract.TestEntry.COLUMN_TEMPERATURE, test.getTemperature());
+        values.put(MedicalContract.TestEntry.COLUMN_BLOOD_PRESSURE, test.getBloodPressure());
         long rowId = database.insert(MedicalContract.TestEntry.TABLE_NAME, null, values);
         Log.d(TAG, "Test with ID" + rowId);
     }
@@ -148,7 +149,8 @@ public class MedicalDataSource {
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_PATIENT_ID)),
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPH)),
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPL)),
-                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEMPERATURE))
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEMPERATURE)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BLOOD_PRESSURE))
                 );
                 tests.add(test);
             }
@@ -173,7 +175,8 @@ public class MedicalDataSource {
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_PATIENT_ID)),
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPH)),
                         cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BPL)),
-                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEMPERATURE))
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_TEMPERATURE)),
+                        cursor.getInt(cursor.getColumnIndex(MedicalContract.TestEntry.COLUMN_BLOOD_PRESSURE))
                 );
                 tests.add(test);
             }

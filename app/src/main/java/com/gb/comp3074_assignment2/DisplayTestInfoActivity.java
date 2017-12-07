@@ -26,6 +26,7 @@ public class DisplayTestInfoActivity extends Activity {
         TextView bplText = findViewById(R.id.bpl_text);
         TextView bphText = findViewById(R.id.bph_text);
         TextView temperatureText = findViewById(R.id.temperature_text);
+        TextView bloodPressureText = findViewById(R.id.blood_pressure_text);
 
 
         dataSource = new MedicalDataSource(this);
@@ -47,6 +48,7 @@ public class DisplayTestInfoActivity extends Activity {
         bplText.setText(String.valueOf(test.getBpl()));
         bphText.setText(String.valueOf(test.getBph()));
         temperatureText.setText(String.valueOf(test.getTemperature()));
+        bloodPressureText.setText(String.valueOf(test.getBloodPressure()));
         dataSource.close();
 
 

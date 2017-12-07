@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
             for (int i = 1; i < 11; i++) {
                 String iStr = String.valueOf(i);
                 dataSource.createPatient(new Patient(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment", i + 30, "Room " + iStr));
-                dataSource.createTest(new Test(i, i, 90 + i, 100 + i, 98 + i));
+                dataSource.createTest(new Test(i, i, 90 + i, 100 + i, 98 + i, 120 + i ));
                 dataSource.createNurse(new Nurse(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
                 dataSource.createDoctor(new Doctor(i, "firstName" + iStr, "lastName" + iStr, "MainDepartment"));
             }

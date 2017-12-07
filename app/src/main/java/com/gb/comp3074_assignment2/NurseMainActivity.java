@@ -49,4 +49,9 @@ public class NurseMainActivity extends Activity implements View.OnClickListener 
         }
     }
 
+    public void onLogoutClick(View v) {
+        intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
 }
